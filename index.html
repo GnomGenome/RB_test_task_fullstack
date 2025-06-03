@@ -43,7 +43,7 @@
     <div class="products__grid">
 
       <!-- Карточка товара -->
-      <div class="product-card">
+      <div class="product-card" style="height: 328px;">
         <div class="product-card__image-wrapper">
           <img class="product-card__image" src="/public/pictures/peals.jpg" alt="Горох в стручках" />
           <div class="product-card__icons">
@@ -61,85 +61,86 @@
           <button class="product-card__button">Оставить заявку</button>
         </div>
       </div>
-
-      <!-- Голубика -->
-      <div class="product-card">
-        <div class="product-card__image-wrapper">
-          <img class="product-card__image" src="/public/pictures/blueberry.jpg" alt="Голубика лесная" />
-          <div class="product-card__icons">
-            <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
-            <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+      <div style="display: flex; flex-direction: column; height: 328px; gap: 16px;">
+        <!-- Голубика -->
+        <div class="product-card" style="flex: 1; position: relative;">
+          <div class="product-card__image-wrapper">
+            <img class="product-card__image" src="/public/pictures/blueberry.jpg" alt="Голубика лесная" />
+            <div class="product-card__icons">
+              <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
+              <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+            </div>
+            <div class="product-card__labels">
+              <div class="label label--pink">-31%</div>
+              <div class="label label--blue">Распродажа</div>
+            </div>
           </div>
-          <div class="product-card__labels">
-            <div class="label label--pink">-31%</div>
-            <div class="label label--blue">Распродажа</div>
+          <div class="product-card__info">
+            <h3 class="product-card__title">Голубика лесная, 200 г</h3>
+            <p class="product-card__price">140 ₽</p>
+            <button class="product-card__button">Оставить заявку</button>
           </div>
         </div>
-        <div class="product-card__info">
-          <h3 class="product-card__title">Голубика лесная, 200 г</h3>
-          <p class="product-card__price">140 ₽</p>
-          <button class="product-card__button">Оставить заявку</button>
+      
+        <!-- Морковь -->
+        <div class="product-card" style="flex: 1; position: relative;">
+          <div class="product-card__image-wrapper">
+            <img class="product-card__image" src="/public/pictures/carrot.jpg" alt="Морковь мытая" />
+            <div class="product-card__icons">
+              <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
+              <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+            </div>
+            <div class="product-card__labels">
+              <div class="label label--purple">Хит</div>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__title">Морковь мытая, 1 кг</h3>
+            <p class="product-card__price">140 ₽</p>
+            <button class="product-card__button">Оставить заявку</button>
+          </div>
         </div>
       </div>
-
-      <!-- Морковь -->
-      <div class="product-card">
-        <div class="product-card__image-wrapper">
-          <img class="product-card__image" src="/public/pictures/carrot.jpg" alt="Морковь мытая" />
-          <div class="product-card__icons">
-            <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
-            <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+      <div style="display: flex; flex-direction: row; width: 100%; height: 328px; gap: 16px;">      
+        <!-- Попкорн -->
+        <div class="product-card">
+          <div class="product-card__image-wrapper">
+            <img class="product-card__image" src="/public/pictures/popcorn.jpg" alt="Попкорн солёный" />
+            <div class="product-card__icons">
+              <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
+              <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+            </div>
+            <div class="product-card__labels">
+              <div class="label label--yellow">Товар дня</div>
+              <div class="label label--green">-29%</div>
+            </div>
           </div>
-          <div class="product-card__labels">
-            <div class="label label--purple">Хит</div>
+          <div class="product-card__info">
+            <h3 class="product-card__title">Попкорн солёный, 120 г</h3>
+            <p class="product-card__price">160 ₽</p>
+            <button class="product-card__button">Оставить заявку</button>
           </div>
         </div>
-        <div class="product-card__info">
-          <h3 class="product-card__title">Морковь мытая, 1 кг</h3>
-          <p class="product-card__price">140 ₽</p>
-          <button class="product-card__button">Оставить заявку</button>
+
+        <!-- Мороженое -->
+        <div class="product-card">
+          <div class="product-card__image-wrapper">
+            <img class="product-card__image" src="/public/pictures/icecream.jpg" alt="Эскимо с малиной" />
+            <div class="product-card__icons">
+              <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
+              <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+            </div>
+            <div class="product-card__labels">
+              <div class="label label--purple">Хит</div>
+            </div>
+          </div>
+          <div class="product-card__info">
+            <h3 class="product-card__title">Эскимо с малиной, 150 г</h3>
+            <p class="product-card__price">160 ₽</p>
+            <button class="product-card__button">Оставить заявку</button>
+          </div>
         </div>
       </div>
-
-      <!-- Попкорн -->
-      <div class="product-card">
-        <div class="product-card__image-wrapper">
-          <img class="product-card__image" src="/public/pictures/popcorn.jpg" alt="Попкорн солёный" />
-          <div class="product-card__icons">
-            <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
-            <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
-          </div>
-          <div class="product-card__labels">
-            <div class="label label--yellow">Товар дня</div>
-            <div class="label label--green">-29%</div>
-          </div>
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__title">Попкорн солёный, 120 г</h3>
-          <p class="product-card__price">160 ₽</p>
-          <button class="product-card__button">Оставить заявку</button>
-        </div>
-      </div>
-
-      <!-- Мороженое -->
-      <div class="product-card">
-        <div class="product-card__image-wrapper">
-          <img class="product-card__image" src="/public/pictures/icecream.jpg" alt="Эскимо с малиной" />
-          <div class="product-card__icons">
-            <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
-            <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
-          </div>
-          <div class="product-card__labels">
-            <div class="label label--purple">Хит</div>
-          </div>
-        </div>
-        <div class="product-card__info">
-          <h3 class="product-card__title">Эскимо с малиной, 150 г</h3>
-          <p class="product-card__price">160 ₽</p>
-          <button class="product-card__button">Оставить заявку</button>
-        </div>
-      </div>
-
     </div>
   </section>
 
