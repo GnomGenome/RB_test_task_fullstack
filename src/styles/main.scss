@@ -1,123 +1,253 @@
 .hero {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    min-width: 360px;
-    max-width: 1440px;
-    min-height: 300px;
-    max-height: 645px;
+  min-width: 360px;
+  //max-width: 1440px;
+  min-height: 300px;
+  //max-height: 645px;
 
-    border: 16px solid transparent;
-    padding: 16px 8px;
+  border: 16px solid transparent;
+  padding: 16px 8px;
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  
-    &__container {
-      width: 100%;
-      width: 1200px;
-      height: 517px;
-      overflow: hidden;
-      position: relative;
-      background: #000;
+  &__container {
+    width: 100%;
+    //max-width: 1200px;
+    height: 517px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
 
-      img {
-        opacity: 0.6;
-      }
+    img {
+      opacity: 0.6;
     }
-  
-    &__image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-  
-    &__button {
-      position: absolute;
-      width: 181px;
-      height: 33px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) skew(-20deg);
-      background-color: #18C576;
-      border: none;
-      color: white;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
-  
-      // внутренняя обёртка, чтобы текст не искажался
-      &-text {
-        transform: skew(20deg); // отменяем наклон
 
-        width: 115px;
-        height: 17px;
-
-        font-family: 'Inter';
-        font-style: italic;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 120%;
-        /* identical to box height, or 17px */
-
-        color: #FFFFFF;
-
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        white-space: nowrap;
-
+    // Активное состояние
+    &--video-active {
+      .hero__image {
+        display: none;
       }
-      &__video {
-        display: none; // Скрыто по умолчанию
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-    
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        box-sizing: border-box;
-    
-        iframe {
-          max-width: 100%;
-          max-height: 100%;
-          border-radius: 12px;
-        }
-      }
-    
-      &__video--active {
+
+      .hero__video {
         display: flex;
       }
     }
   }
 
-.products {
-     background: #F2F2F2;
+  &__image {
+    width: 100%;
+    height: 100%;
+    //max-width: 1200px;
+    //max-height: 517px;
+    min-width: 360px;
+    min-height: 300px;
 
-    display: flex;
+    object-fit: cover;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__video {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    align-items: center;
     justify-content: center;
 
-    min-width: 360px;
-    max-width: 1440px;
-    min-height: 1264px;
-    max-height: 456px;
+    box-sizing: border-box;
 
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    
-    
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; 
+      border: none;
+      display: block;
+
+
+    }
+
+  }
+
+  &__button {
+    position: absolute;
+    width: 181px;
+    height: 33px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skew(-20deg);
+    background-color: #18C576;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+
+    &-text {
+      transform: skew(20deg);
+      width: 115px;
+      height: 17px;
+
+      font-family: 'Inter';
+      font-style: italic;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      color: #FFFFFF;
+      white-space: nowrap;
+    }
+
+    &-icon {
+      margin-left: 8px;
+    }
+
+    &-text {
+      width: 90px;
+      height: 15px;
+      font-size: 12px;
+    }
+  }
+}
+
+
+.products {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    padding: 32px;
+    //max-width: 1200px;
+    width: 100%;
+  }
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 2px #1ca5f7;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__icons {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .icon {
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  &__labels {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  &__info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+
+  &__button {
+    background: #18c576;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+
+    &:hover {
+      background: #13a364;
+    }
+  }
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: #fff;
+  white-space: nowrap;
+
+  &--green {
+    background: #18c576;
+  }
+
+  &--yellow {
+    background: #f8a725;
+  }
+
+  &--pink {
+    background: #e94d9a;
+  }
+
+  &--blue {
+    background: #2d9cdb;
+  }
+
+  &--purple {
+    background: #9b51e0;
+  }
 }

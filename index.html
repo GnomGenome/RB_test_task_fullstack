@@ -12,36 +12,48 @@
   <section class="hero">
     <div class="hero__container">
       <img src="/public/pictures/chocolate.jpg" alt="Шоколад" class="hero__image" />
-      <button class="hero__button">
+      <button id="show-video-btn" class="hero__button">
         <span class="hero__button-text">
           Смотреть видео
           <span class="hero__button-icon">▶</span>
         </span>
       </button>
+      
 
        <!-- Скрытый блок с видео -->
       <div class="hero__video" id="video-container">
         <iframe
           width="560"
           height="315"
-          src="https://youtu.be/5za3IFhvCck"
+          src="https://www.youtube.com/embed/5za3IFhvCck"
           title="YouTube video"
           frameborder="0"
           allow="autoplay; encrypted-media"
           allowfullscreen
         ></iframe>
+
       </div>
     </div>
   </section>
 
+
+
   <!-- Products Section -->
   <section class="products">
     <div class="products__grid">
+
+      <!-- Карточка товара -->
       <div class="product-card">
-        <img src="/public/pictures/peals.jpg" alt="Горох" class="product-card__image">
-        <div class="product-card__labels">
-          <span class="label label--green">-29%</span>
-          <span class="label label--yellow">Товар дня</span>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="/public/pictures/peals.jpg" alt="Горох в стручках" />
+          <div class="product-card__icons">
+            <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
+            <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+          </div>
+          <div class="product-card__labels">
+            <div class="label label--green">-29%</div>
+            <div class="label label--yellow">Товар дня</div>
+          </div>
         </div>
         <div class="product-card__info">
           <h3 class="product-card__title">Горох в стручках, 1 кг</h3>
@@ -50,11 +62,18 @@
         </div>
       </div>
 
+      <!-- Голубика -->
       <div class="product-card">
-        <img src="/public/pictures/blueberry.jpg" alt="Голубика" class="product-card__image">
-        <div class="product-card__labels">
-          <span class="label label--pink">-31%</span>
-          <span class="label label--blue">Распродажа</span>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="/public/pictures/blueberry.jpg" alt="Голубика лесная" />
+          <div class="product-card__icons">
+            <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
+            <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+          </div>
+          <div class="product-card__labels">
+            <div class="label label--pink">-31%</div>
+            <div class="label label--blue">Распродажа</div>
+          </div>
         </div>
         <div class="product-card__info">
           <h3 class="product-card__title">Голубика лесная, 200 г</h3>
@@ -63,10 +82,17 @@
         </div>
       </div>
 
+      <!-- Морковь -->
       <div class="product-card">
-        <img src="/public/pictures/carrot.jpg" alt="Морковь" class="product-card__image">
-        <div class="product-card__labels">
-          <span class="label label--purple">Хит</span>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="/public/pictures/carrot.jpg" alt="Морковь мытая" />
+          <div class="product-card__icons">
+            <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
+            <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+          </div>
+          <div class="product-card__labels">
+            <div class="label label--purple">Хит</div>
+          </div>
         </div>
         <div class="product-card__info">
           <h3 class="product-card__title">Морковь мытая, 1 кг</h3>
@@ -75,11 +101,18 @@
         </div>
       </div>
 
+      <!-- Попкорн -->
       <div class="product-card">
-        <img src="/public/pictures/popcorn.jpg" alt="Попкорн" class="product-card__image">
-        <div class="product-card__labels">
-          <span class="label label--yellow">Товар дня</span>
-          <span class="label label--green">-29%</span>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="/public/pictures/popcorn.jpg" alt="Попкорн солёный" />
+          <div class="product-card__icons">
+            <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
+            <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+          </div>
+          <div class="product-card__labels">
+            <div class="label label--yellow">Товар дня</div>
+            <div class="label label--green">-29%</div>
+          </div>
         </div>
         <div class="product-card__info">
           <h3 class="product-card__title">Попкорн солёный, 120 г</h3>
@@ -88,17 +121,25 @@
         </div>
       </div>
 
+      <!-- Мороженое -->
       <div class="product-card">
-        <img src="/public/pictures/icecream.jpg" alt="Эскимо" class="product-card__image">
-        <div class="product-card__labels">
-          <span class="label label--purple">Хит</span>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="/public/pictures/icecream.jpg" alt="Эскимо с малиной" />
+          <div class="product-card__icons">
+            <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
+            <img class="icon" src="/public/pictures/eye.png" alt="Просмотров" />
+          </div>
+          <div class="product-card__labels">
+            <div class="label label--purple">Хит</div>
+          </div>
         </div>
         <div class="product-card__info">
           <h3 class="product-card__title">Эскимо с малиной, 150 г</h3>
-          <p class="product-card__price">190 ₽</p>
+          <p class="product-card__price">160 ₽</p>
           <button class="product-card__button">Оставить заявку</button>
         </div>
       </div>
+
     </div>
   </section>
 
