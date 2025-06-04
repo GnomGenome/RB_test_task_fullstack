@@ -194,10 +194,11 @@
   }
 
   &__title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #222;
+    top: 0;
+    left: 0px;
     margin: 0;
+    font-weight: 600;
+    font-size: 20px;
   }
 
   &__price {

@@ -43,8 +43,8 @@
     <div class="products__grid">
 
       <!-- Карточка товара -->
-      <div class="product-card" style="height: 328px;">
-        <div class="product-card__image-wrapper">
+      <div class="product-card" style="height: 328px; background: transparent; position: relative;">
+        <div class="product-card__image-wrapper" style="position: relative;">
           <img class="product-card__image" src="/public/pictures/peals.jpg" alt="Горох в стручках" />
           <div class="product-card__icons">
             <img class="icon" src="/public/pictures/like.png" alt="Нравится" />
@@ -55,15 +55,40 @@
             <div class="label label--yellow">Товар дня</div>
           </div>
         </div>
-        <div class="product-card__info">
-          <h3 class="product-card__title">Горох в стручках, 1 кг</h3>
-          <p class="product-card__price">570 ₽</p>
+        <!-- Текст поверх изображения -->
+        <div class="product-card__info" style="
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        background: transparent;
+        color: white;
+        z-index: 10;
+        padding: 0;
+        margin: 0;
+        text-shadow: 0 0 5px rgba(0,0,0,0.7);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      ">
+          <h3 class="product-card__title" style="color: white; margin: 0;">Горох в стручках, 1 кг</h3>
+        </div>
+
+        <div style="
+          position: absolute;
+          bottom: 8px;
+          right: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        ">
+          <p class="product-card__price" style="color: white; white-space: nowrap;">570 ₽</p>
           <button class="product-card__button">Оставить заявку</button>
         </div>
       </div>
+
       <div style="display: flex; flex-direction: column; height: 328px; gap: 16px;">
         <!-- Голубика -->
-        <div class="product-card" style="flex: 1; position: relative;">
+        <div class="product-card" style="flex: 1; position: relative; background: transparent;">
           <div class="product-card__image-wrapper">
             <img class="product-card__image" src="/public/pictures/blueberry.jpg" alt="Голубика лесная" />
             <div class="product-card__icons">
@@ -74,16 +99,39 @@
               <div class="label label--pink">-31%</div>
               <div class="label label--blue">Распродажа</div>
             </div>
+            
           </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Голубика лесная, 200 г</h3>
-            <p class="product-card__price">140 ₽</p>
-            <button class="product-card__button">Оставить заявку</button>
+          <div class="product-card__info" style="
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: transparent;
+            color: white;
+            z-index: 10;
+            padding: 0;
+            margin: 0;
+            text-shadow: 0 0 5px rgba(0,0,0,0.7);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+          ">
+            <h3 class="product-card__title" style="color: white;">Голубика лесная, 200 г</h3>
           </div>
+          <div style="
+          position: absolute;
+          bottom: 8px;
+          right: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        ">
+          <p class="product-card__price" style="color: white; white-space: nowrap;">140 ₽</p>
+          <button class="product-card__button">Оставить заявку</button>
+        </div>
         </div>
       
         <!-- Морковь -->
-        <div class="product-card" style="flex: 1; position: relative;">
+        <div class="product-card" style="flex: 1; position: relative; background: transparent;">
           <div class="product-card__image-wrapper">
             <img class="product-card__image" src="/public/pictures/carrot.jpg" alt="Морковь мытая" />
             <div class="product-card__icons">
@@ -94,11 +142,33 @@
               <div class="label label--purple">Хит</div>
             </div>
           </div>
-          <div class="product-card__info">
-            <h3 class="product-card__title">Морковь мытая, 1 кг</h3>
-            <p class="product-card__price">140 ₽</p>
-            <button class="product-card__button">Оставить заявку</button>
+          <div class="product-card__info" style="
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: transparent;
+            color: white;
+            z-index: 10;
+            padding: 0;
+            margin: 0;
+            text-shadow: 0 0 5px rgba(0,0,0,0.7);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+          ">
+            <h3 class="product-card__title" style="color: white;">Морковь мытая, 1 кг</h3>
           </div>
+          <div style="
+          position: absolute;
+          bottom: 8px;
+          right: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        ">
+          <p class="product-card__price" style="color: white; white-space: nowrap;">140 ₽</p>
+          <button class="product-card__button">Оставить заявку</button>
+        </div>
         </div>
       </div>
       <div style="display: flex; flex-direction: row; width: 100%; height: 328px; gap: 16px;">      
